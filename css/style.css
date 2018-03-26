@@ -1,0 +1,213 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.main-content {
+    height: auto;
+    min-height: 100%;
+}
+
+main {
+    padding-bottom: 100px;
+}
+
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+
+footer {
+    height: 100px;
+    margin-top: -100px;
+}
+
+.header {
+    height: 50px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.header-button {
+    font-size: 17px;
+    display: inline-block;
+    border-radius: 15px;
+    transition: .2s linear;
+    width: 150px;
+    height: 30px;
+    background: #c97341;
+    color: #ffffff;
+    text-align: center;
+}
+
+.header-button:hover {
+    box-shadow: 200px 0 0 0 rgba(0,0,0,.3) inset;
+    cursor: pointer;
+}
+
+.header div:nth-child(1) {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.header div:nth-child(2) {
+    position: absolute;
+    left: 170px;
+    top: 10px;
+}
+
+.header div:nth-child(3) {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.button-choice {
+    overflow: hidden;
+}
+.button-choice:hover {
+    height: 200px;
+    background: #c98342;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.button-choice:nth-child(1) ul {
+    position: absolute;
+    left: -40px;
+    top: 29px;
+}
+.button-choice:nth-child(1) li {
+
+    display: block;
+    width: 150px;
+    height: 50px;
+}
+
+.button-choice:nth-child(1) ul .active-shirt {
+    background: #3e6e49;
+}
+
+.button-choice:nth-child(2) ul {
+    position: absolute;
+    left: -40px;
+    top: 29px;
+}
+.button-choice:nth-child(2) li {
+
+    display: block;
+    width: 150px;
+    height: 50px;
+}
+
+.button-choice:nth-child(2) ul .active-difficulty {
+    background: #3e6e49;
+}
+
+.button-choice li:hover {
+    background: #64a873;
+}
+
+.board {
+    height: 500px;
+    border: 1px solid #6e6d6b;
+    background: #32987b;
+}
+
+.rules-text {
+    display: inline-block;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    position: relative;
+    left: 200px;
+    top: 100px;
+}
+
+.footer {
+    height: 90px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.button-time {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    background: #376c6e;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    transition: .2s linear;
+}
+
+.button-time-active {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #3A2F28;}
+
+.flip-container {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    perspective: 1000;
+}
+.flip {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 85px;
+    height: 125px;
+}
+
+/* здесь находится скорость перевертывания */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* лицевая сторона размещена над обратной */
+.front {
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+    transform: rotateY(180deg);
+    text-align: center;
+    line-height: 3;
+    font-size: 40px;
+    background: white;
+}
+
+@keyframes hiddenCard {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+}
+
+.hiddenCard {
+    animation: hiddenCard .7s;
+    opacity: 0;
+}

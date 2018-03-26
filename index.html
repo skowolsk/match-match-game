@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main-content">
+    <header>
+        <div class="wrapper header">
+            <div class="header-button button-choice">Shirt cards
+                <ul id="shirtCards">
+                    <li value="1" class="active-shirt">Голубая</li>
+                    <li value="2">Розовая</li>
+                    <li value="3">Золотая</li>
+                </ul>
+            </div>
+            <div class="header-button button-choice">Difficulty game
+                <ul id="difficultyGame">
+                    <li value="10" class="active-difficulty">10</li>
+                    <li value="18">18</li>
+                    <li value="24">24</li>
+                </ul>
+            </div>
+            <div id="newGame" class="header-button">New game</div>
+        </div>
+    </header>
+    <main>
+        <section id="broadGame" class="wrapper board">
+            <div class="rules-text">
+                <span>How to Play:</span>
+                <ol>
+                    <li>Select two cards to try to match the pictures</li>
+                    <li>If you match the pictures you can go again</li>
+                    <li>If they don't match it is the computer turn them</li>
+                    <li>The player that finds all pairs wins!</li>
+                    <li>Have Fun!</li>
+                </ol>
+            </div>
+            <div class="cards"></div>
+        </section>
+    </main>
+</div>
+
+<footer>
+    <div class="wrapper footer">
+        <div id="counterGame" class="button-time">
+            <span>hh</span>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="js/script.js"></script>
+</html>
